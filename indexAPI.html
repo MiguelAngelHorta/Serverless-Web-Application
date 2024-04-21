@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Controls Inventory</title>
+    <link rel="icon" type="image/x-icon" href="profile.jpg" />
+    <!-- Add Bootstrap and Popper.js scripts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+     <!-- Custom CSS-->
+    <link rel="stylesheet" href="styleAPI.css">
+</head>
+<body>
+    <div class="container">
+      <h2 class="mt-5">Security Controls Inventory</h2>
+        <!-- Top container -->
+          <div class="top-container hidden">
+            <div class="row mb-5">
+                <div class="form-group col-md-6 mb-3">
+                    <label for="mainID">Main Control ID</label>
+                    <input
+                      type="text"
+                      name="mainID"
+                      class="form-control"
+                      id="mainID"
+                      placeholder="Enter Main ID"
+                    />
+                </div>
+                <div class="form-group col-md-6 mb-3">
+                    <label for="mainDescription">Main Control Description</label>
+                    <input
+                      type="text"
+                      name="mainDescription"
+                      class="form-control"
+                      id="mainDescription"
+                      placeholder="Enter Control Description"
+                    />
+                </div>
+                <div class="form-group col-md-6 mb-1">
+                    <label for="domain">Security Domain</label>
+                    <select class="form-control" id="domain">
+                      <option value="">Select an option</option>
+                      <option value="Security and Risk Management">Security and Risk Management</option>
+                      <option value="Asset Security">Asset Security</option>
+                      <option value="Security Architecture and Engineering">Security Architecture and Engineering</option>
+                      <option value="Communication and Network Security">Communication and Network Security</option>
+                      <option value="Identity and Access Management (IAM)">Identity and Access Management (IAM)</option>
+                      <option value="Security Assessment and Testing">Security Assessment and Testing</option>
+                      <option value="Security Operations">Security Operations</option>
+                      <option value="Software Development Security">Software Development Security</option>
+                    </select>
+                </div>              
+                <div class="form-group col-md-6 mb-1">
+                    <label for="scope">Scope</label>
+                    <select class="form-control" id="scope">
+                        <option value="">Select an option</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                <div class="col-lg-12 mt-1 mb-1">
+
+        <!-- Bottom container -->
+        <div class="bottom-container">
+            <hr>
+            <div class="row mt-1">
+                <div class="col-12">
+                  <div class="d-flex"> <button class="btn btn-success me-2 mb-3" id="Add Control" onclick="AddData()">Add Control</button>
+                    <button class="btn btn-primary me-2 mb-3" id="Update" style="display: none;" onclick="updateControl()">Update</button>
+                    <button class="btn btn-secondary me-2 mb-3" onclick="downloadCSV()">Download CSV</button>
+                </div>
+                    <table class="table table-bordered" id="crudTable">
+                        <thead>
+                            <tr>
+                                <!-- Table headers -->
+                                <th>Main Control ID</th>
+                                <th>Main Control Description</th>
+                                <th>Domain</th>
+                                <th>Scope</th>
+                                <th>Actions</th>
+                              </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Main Control ID</td>
+                            <td>Main Control Description</td>
+                            <td>Domain</td>
+                            <td>Scope</td>
+                            <td>Actions</td> <!-- Apply the hidden class to the cells in the 5th column -->
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Bootstrap and Popper.js scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="scriptAPI.js"></script>
+</body>
+</html
