@@ -1,6 +1,6 @@
 // Function to fetch controls initially and on subsequent updates
 function fetchControls() {
-  fetch('https://9ookpuq4tk.execute-api.us-east-1.amazonaws.com/prod/items')
+  fetch('APIGatewayToLambda/prod/items')
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -62,7 +62,7 @@ function fetchControls() {
       scope
     };
   
-    fetch('https://9ookpuq4tk.execute-api.us-east-1.amazonaws.com/prod/items', {
+    fetch('APIGatewayToLambda/prod/items', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -94,7 +94,7 @@ function fetchControls() {
     // Prompt for confirmation
     if (confirm('Are you sure you want to update this data?')) {
         // Fetch all controls
-        fetch('https://9ookpuq4tk.execute-api.us-east-1.amazonaws.com/prod/items')
+        fetch('APIGatewayToLambda/prod/items')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch controls');
@@ -158,7 +158,7 @@ function updateControl(id) {
       return;
   }
 
-  fetch(`https://9ookpuq4tk.execute-api.us-east-1.amazonaws.com/prod/items/${updatedControl.mainID}`, {
+  fetch(`https://APIGatewayToLambda/items/${updatedControl.mainID}`, {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json'
@@ -217,7 +217,7 @@ function updateControl(id) {
   // Function to delete control with confirmation and error handling
   function deleteControl(id) {
     if (confirm('Are you sure you want to delete this control?')) {
-      fetch(`https://9ookpuq4tk.execute-api.us-east-1.amazonaws.com/prod/items/${id}`, {
+      fetch(`APIGatewayToLambda/items/${id}`, {
         method: 'DELETE'
       })
         .then(response => {
