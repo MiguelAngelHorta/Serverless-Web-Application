@@ -1,8 +1,8 @@
 # Serverless-Web-Application
-Web app on AWS
+Build a web-based interface for managing security controls by perform CRUD operations (Create, Read, Update, Delete) on a list of controls stored in dynamodb, with API calls handled via frontend interactions and DynamoDB manipulation facilitated by Lambda functions and API Gateway endpoints.
 
 ## Architecture
-![App Structure](https://github.com/MiguelAngelHorta/Serverless-Web-Application/assets/106134627/a18d1d6f-c110-4252-bb47-5e0c1558ffa3)
+![Serverless App](https://github.com/MiguelAngelHorta/Serverless-Web-Application/assets/106134627/16d45e9a-b8bf-4b8c-9d49-a70e995af126)
 
 ## API Endpoints
 - Endpoint: https://9ookpuq4tk.execute-api.us-east-1.amazonaws.com/prod/items
