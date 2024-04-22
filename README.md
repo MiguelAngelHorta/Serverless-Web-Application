@@ -2,7 +2,19 @@
 Web app on AWS
 
 ## Architecture
+![App Structure](https://github.com/MiguelAngelHorta/Serverless-Web-Application/assets/106134627/a18d1d6f-c110-4252-bb47-5e0c1558ffa3)
 
+## API Endpoints
+- Endpoint: https://9ookpuq4tk.execute-api.us-east-1.amazonaws.com/prod/items
+- Stage: Prod
+- Routes: 
+  - /items
+    - GET
+    - PUT
+  - /items/{mainID}
+    - POST
+    - DELETE
+    - GET
 
 ## Features
 
