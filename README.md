@@ -34,3 +34,7 @@ The project utilizes the following technologies:
 - **S3**: Object storage service used for hosting the web interface files.
 - **CloudFront**: Content delivery network (CDN) service for fast and secure delivery of web content globally.
 - **Certificate Manager**: Manages SSL/TLS certificates for enabling HTTPS connections.
+- **CloudWatch Logs**: Logging and monitoring of exceeded thresholds.
+-  **Simple Notification Service (SNS)**: Email notification of exceeded thresholds.
+
+
